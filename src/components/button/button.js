@@ -1,37 +1,18 @@
-import React, {} from 'react';
-import ReactDOM from 'react-dom';
+import React, {memo} from 'react';
 import './button.css';
 
-// const button = React.memo (
-//     (props) => {
-//         (<button className="button" onClick={props.onClick}>
-//       PRESS ON ME
-//     </button>
-//   )
-//   return (
-//     button
-//   )
-//     }
-    
-// );
+function click () {
+  alert("U CLIKED MAZAFAKA")
+}
 
-// function click () {
-//   console.log("Click")
-// }
+const Button = memo(({text}) => {
+  return (
+    <button class="button" onClick={click}>
+      <p class="button_text">{text}</p>
+    </button>
+  )
+});
 
-// export default function button (props) {
-//        return (
-//    <button onClick={click}>{props.text}</button>
-//   )
-// }
-
-// button.defaultProps = {text:"Press On ME"};
-
-export default function element () { 
-return(
-<h1>Привет, мир</h1>)
-};
-ReactDOM.render(element, document.getElementById('root'));
-
+export default Button
 
 

@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import button from './components/button/button.js';
-import element from './components/button/button'
+import Button from './components/button/button.js';
+
+
+
 
 ReactDOM.render(
   
-    <element />,
+    <Button text={'Press on me'} /> ,
   
   document.getElementById('root')
 );
