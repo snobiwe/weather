@@ -11,3 +11,11 @@
     font-family: 'Roboto';
     font-weight: 600;
 }
+
+@font-face {
+    src: url(../fonts/Roboto-Regular.woff) format('woff');
+    src: url(../fonts/Roboto-Regular.woff) format('woff2');
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
