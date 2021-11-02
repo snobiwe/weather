@@ -1,6 +1,8 @@
 .card {
     max-width: 290px;
     border: 1px solid #e4e3e9;
+    background-color: rgb(252, 252, 252);
+    max-height: 499px;
 }
 
 .card:hover {

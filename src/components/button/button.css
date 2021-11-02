@@ -1,6 +1,6 @@
 .button {
     background-color: rgb(56, 88, 255);
-    width: 292px;
+    max-width: 292px;
     height: 48px;
     border: none;
     border-radius: 2px;

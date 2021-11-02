@@ -1,13 +1,13 @@
 import React, {memo} from 'react';
 import './button.css';
 
-function click () {
-  alert("U CLIKED MAZAFAKA")
-}
+// function click () {
+//   alert("U CLIKED MAZAFAKA")
+// }
 
 const Button = memo(({text}) => {
   return (
-    <button class="button" onClick={click}>
+    <button class="button">
       <p class="button_text">{text}</p>
     </button>
   )
@@ -16,3 +16,4 @@ const Button = memo(({text}) => {
 export default Button
 
 
+// <Button text={'Press on me'} /> ,

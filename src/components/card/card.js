@@ -1,9 +1,9 @@
 import React, {memo} from 'react';
-import plant from './images/plant.png';
+
 import './card.css';
 
 
-const Card = memo(({title, text}) => {
+const Card = memo(({title, text, plant}) => {
     return (
         <div className="card">
             <img src={plant} className="card_photo" alt="plant" />
@@ -15,3 +15,5 @@ const Card = memo(({title, text}) => {
 });
 
 export default Card;
+
+// <Card title={'What about indoor plants?'} text={'testtextajajaja'} />,
