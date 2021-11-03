@@ -1,0 +1,30 @@
+.start {
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: space-between;
+}
+
+.start_column {
+    max-width: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 80px;
+}
+
+.start_title {
+    font-weight: 900;
+}
+
+.start_text {
+    max-width: 451px;
+}
+
+.start_photo {
+    width: 50%;
+    max-height: 100vh;
+}
+
+.button {
+    width: 290px;
+}

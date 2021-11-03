@@ -1,0 +1,47 @@
+.card {
+    max-width: 290px;
+    border: 1px solid #e4e3e9;
+    background-color: rgb(252, 252, 252);
+    max-height: 499px;
+}
+
+.card:hover {
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.card_photo {
+    max-width: 290px;
+}
+
+.info {
+    font-family: 'Roboto';
+    font-weight: 600;
+    line-height: 14px;
+    font-size: 11px;
+    margin: 14px 24px;
+}
+
+.info_span {
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: rgb(112, 112, 112);
+}
+
+.card_title {
+    color: rgb(8, 22, 58);
+    font-family: 'Roboto';
+    font-weight: 600;
+    line-height: 32px;
+    font-size: 18px;
+    margin: 0 auto;
+    width: 242px;
+}
+
+.card_text {
+    font-family: 'Roboto';
+    color: #5E677f;
+    max-width: 242px;
+    margin: 8px auto 60px;
+    text-overflow: ellipsis;
+}

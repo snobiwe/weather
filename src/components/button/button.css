@@ -1,0 +1,25 @@
+.button {
+    background-color: rgb(56, 88, 255);
+    max-width: 292px;
+    height: 48px;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    
+}
+
+.button_text {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    font-weight: 900;
+    line-height: 16px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    max-width: 271px;
+}
