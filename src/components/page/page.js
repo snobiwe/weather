@@ -1,8 +1,27 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback, useEffect, useState} from 'react';
 import './page.css';
+import ApiService from "../../lib/Api";
 
 
 const Page = memo(({title, subtitle, button, card}) => {
+    const api = new ApiService() // FIXME: Мы избавимся
+    const [slack, setSlack] = useState({});
+
+    const getSlack = useCallback(async () => {
+        try {
+            const {data} = await api.getSlack();
+            setSlack(data)
+        } catch (e) {
+            console.log(e);
+        }
+    }, [])
+
+    useEffect(() => {
+        (async () => {
+           await getSlack()
+        })()
+    }, [])
+
     return (
         <div className="page">
 
@@ -34,7 +53,7 @@ const Page = memo(({title, subtitle, button, card}) => {
 
         <div className="content">
         <h2 className="title">{title}</h2>
-        <p className="subtitle">{subtitle}</p>
+        <p className="subtitle">{slack.username || subtitle}</p>
 
         <ul className="container">
         <li className="card">{card}</li>
@@ -50,5 +69,5 @@ const Page = memo(({title, subtitle, button, card}) => {
 
 export default Page;
 
-// <Page button={<Button text={"click please"} />} title={"Do you love plants"} subtitle={"We can tell you so much about plants that you will begin to love them. " + 
+// <Page button={<Button text={"click please"} />} title={"Do you love plants"} subtitle={"We can tell you so much about plants that you will begin to love them. " +
     // "For starters, here are general articles about plants, their types, and similar information"} card={<Card plant={plant} text={"test kek lol cheburek"} />} />,
