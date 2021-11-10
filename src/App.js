@@ -6,10 +6,10 @@ import {
     Switch
 } from 'react-router-dom';
 import Button from './components/button/button.js';
-import Card from './components/card/card.js';
-import Start from './components/start/start';
-import Page from './components/page/page.js';
-import plant from './images/plant.png'
+
+import Start from './screens/start/start';
+import Page from './screens/page/page.js';
+
 
 
 const App = memo(() => {
@@ -29,7 +29,7 @@ const App = memo(() => {
             title={"Do you love plants"} 
             subtitle={"We can tell you so much about plants that you will begin to love them. " + 
             "For starters, here are general articles about plants, their types, and similar information"} 
-            card={<Card plant={plant} text={"test kek lol cheburek"} />} />,
+             />,
         </Route>
         </Switch>
         </Router>

@@ -9,17 +9,19 @@ export default class ApiService {
             method,
             data,
             params,
-            baseURL: config.DEV_URL,
+            baseURL: config.DEV_URL2,
             headers: { 'Content-Type': 'application/json', ...headers },
         })
     }
 
-    async getSlack() {
+    async getPokemon() {
         return this.setApi({
-            url: `slack`,
+            url: `berry/1/`,
             method: 'get',
             // data: { username: phone },
         })
     }
-}
+};
+
+
 

@@ -1,24 +1,50 @@
 import React, {memo, useCallback, useEffect, useState} from 'react';
 import './page.css';
 import ApiService from "../../lib/Api";
+import Card from '../../components/card/card';
+import plant from '../../images/plant.png';
+
+
 
 
 const Page = memo(({title, subtitle, button, card}) => {
-    const api = new ApiService() // FIXME: Мы избавимся
-    const [slack, setSlack] = useState({});
+    // const api = new ApiService() // FIXME: Мы избавимся
+    // const [slack, setSlack] = useState({});
 
-    const getSlack = useCallback(async () => {
+    // const getSlack = useCallback(async () => {
+    //     try {
+    //         const {data} = await api.getSlack();
+    //         setSlack(data)
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    // }, [])
+
+    // console.log(slack)
+
+    // useEffect(() => {
+    //     (async () => {
+    //        await getSlack()
+    //     })()
+    // }, [])
+
+    const api = new ApiService()
+    const [pokemon, setPokemon] = useState({});
+
+    const getPokemon = useCallback(async() => {
         try {
-            const {data} = await api.getSlack();
-            setSlack(data)
+            const {data} = await api.getPokemon()
+            setPokemon(data)
         } catch (e) {
-            console.log(e);
+            console.log(e)
         }
     }, [])
 
+    console.log(pokemon);
+
     useEffect(() => {
-        (async () => {
-           await getSlack()
+        (async() => {
+            await getPokemon()
         })()
     }, [])
 
@@ -53,12 +79,12 @@ const Page = memo(({title, subtitle, button, card}) => {
 
         <div className="content">
         <h2 className="title">{title}</h2>
-        <p className="subtitle">{slack.username || subtitle}</p>
+        <p className="subtitle">{subtitle}</p>
 
         <ul className="container">
-        <li className="card">{card}</li>
-        <li className="card">{card}</li>
-        <li className="card">{card}</li>
+        <li className="card">{<Card plant={plant} text={pokemon.name}/>}</li>
+        <li className="card">{<Card plant={plant} text={pokemon.name}/>}</li>
+        <li className="card">{<Card plant={plant} text={pokemon.natural_gift_type.name}/>}</li>
         </ul>
 
         </div>
