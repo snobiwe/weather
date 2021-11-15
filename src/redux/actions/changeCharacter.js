@@ -1,0 +1,2 @@
+export const CHANGE_NAME = 'CHANGE_NAME'
+export const CHANGE_LOCATION = 'CHANGE_LOCATION'

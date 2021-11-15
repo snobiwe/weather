@@ -9,14 +9,14 @@ export default class ApiService {
             method,
             data,
             params,
-            baseURL: config.DEV_URL2,
+            baseURL: config.DEV_URL,
             headers: { 'Content-Type': 'application/json', ...headers },
         })
     }
 
-    async getPokemon() {
+    async getSlack() {
         return this.setApi({
-            url: `berry/1/`,
+            url: `slack`,
             method: 'get',
             // data: { username: phone },
         })
