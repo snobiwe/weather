@@ -3,19 +3,27 @@ import './start.css'
 import plant from '../../images/plant.png'
 import { RickAndMortyController } from '../../redux/controllers/RickAndMortyController'
 import { SlackController } from '../../redux/controllers/slackController'
-import { useCharacterName, useCharacterLocation } from '../../redux/selectors'
+import {
+  useCharacterName,
+  useCharacterLocation,
+  useResponseType,
+  useUsername,
+} from '../../redux/selectors'
+import store from '../../redux/store'
 
 const Start = memo(({ title, subtitle, text, button }) => {
   const character_name = useCharacterName()
   const character_location = useCharacterLocation()
+  const username = useUsername()
+  const response_type = useResponseType()
 
-  const rickAndMortyController = new RickAndMortyController()
+  // const rickAndMortyController = new RickAndMortyController()
 
-  useEffect(() => {
-    ;(async () => {
-      await rickAndMortyController.getCharacter()
-    })()
-  }, [])
+  // useEffect(() => {
+  //   ;(async () => {
+  //     await rickAndMortyController.getCharacter()
+  //   })()
+  // }, [])
 
   const slackController = new SlackController()
 
@@ -26,6 +34,9 @@ const Start = memo(({ title, subtitle, text, button }) => {
   }, [])
 
   console.log(character_name)
+  console.log(store.getState())
+  console.log(username)
+  console.log(response_type)
 
   return (
     <div className="start">

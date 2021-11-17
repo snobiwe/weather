@@ -1,8 +1,14 @@
 const initialState = {
-  username: '',
-  response_type: '',
-  name: '',
-  location: '',
+  user: {
+    username: '',
+    response_type: '',
+    name: '',
+    location: '',
+  },
+  rickAndMorty: {
+    name: '',
+    location: '',
+  },
 }
 
 export default initialState

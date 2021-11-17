@@ -3,6 +3,6 @@ import changeReducer from './changeReducer'
 import characterReducer from './characterReducer'
 
 export default combineReducers({
-  changeReducer,
-  characterReducer,
+  user: changeReducer,
+  rickAndMorty: characterReducer,
 })

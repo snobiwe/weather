@@ -1,6 +1,7 @@
-import { CHANGE_NAME, CHANGE_LOCATION } from '../actions/changeCharacter'
+import { CHANGE_NAME, CHANGE_LOCATION } from '../actionTypes'
+import initialState from '../initialState'
 
-const characterReducer = (state, action) => {
+const characterReducer = (state = initialState.rickAndMorty, action) => {
   switch (action.type) {
     case CHANGE_NAME:
       return { ...state, name: action.value }

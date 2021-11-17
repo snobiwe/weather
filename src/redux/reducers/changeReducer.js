@@ -2,10 +2,10 @@ import {
   CHANGE_USERNAME,
   CHANGE_RESPONSE_TYPE,
   CHANGE_ALL,
-} from '../actions/changeUsername'
+} from '../actionTypes'
 import initialState from '../initialState'
 
-const changeReducer = (state = initialState, action) => {
+const changeReducer = (state = initialState.user, action) => {
   switch (action) {
     case CHANGE_USERNAME:
       return { ...state, username: action.value }

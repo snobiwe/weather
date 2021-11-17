@@ -1,19 +1,19 @@
-import RickAndMortyApiService from '../../lib/Api/rickAndMortyApi'
-import store from '../store'
-import { CHANGE_NAME } from '../actions/changeCharacter'
+// import ApiService from '../../lib/Api/Api'
+// import store from '../store'
+// import { CHANGE_NAME } from '../actionTypes'
 
-export class RickAndMortyController {
-  api = new RickAndMortyApiService()
-  async getCharacter() {
-    try {
-      const { data } = await this.api.getCharacter()
-      store.dispatch({
-        type: CHANGE_NAME,
-        value: data,
-      })
-      console.log(data)
-    } catch (e) {
-      console.log(e)
-    }
-  }
-}
+// export class RickAndMortyController {
+//   api = new ApiService()
+//   async getCharacter() {
+//     try {
+//       const { data } = await this.api.getCharacter()
+//       store.dispatch({
+//         type: CHANGE_NAME,
+//         value: data,
+//       })
+//       console.log(data)
+//     } catch (e) {
+//       console.log(e)
+//     }
+//   }
+// }

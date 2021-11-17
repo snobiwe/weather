@@ -1,6 +1,6 @@
-import ApiService from '../../lib/Api/slackApi'
+import ApiService from '../../lib/Api/Api'
 import store from '../store'
-import { CHANGE_ALL } from '../actions/changeUsername'
+import { CHANGE_ALL } from '../actionTypes'
 
 export class SlackController {
   api = new ApiService()
@@ -17,21 +17,3 @@ export class SlackController {
     }
   }
 }
-// const api = new ApiService() // FIXME: Мы избавимся
-
-//   const getSlack = (async () => {
-//     try {
-//       const { data } = await api.getSlack()
-
-//     } catch (e) {
-//       console.log(e)
-//     }
-//   }, [])
-
-//   console.log(slack)
-
-//   useEffect(() => {
-//     ;(async () => {
-//       await getSlack()
-//     })()
-//   }, [])

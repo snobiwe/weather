@@ -10,13 +10,13 @@ const Page = memo(({ title, subtitle, button }) => {
   const username = useUsername()
   const response_type = useResponseType()
 
-  const rickAndMortyController = new RickAndMortyController()
+  // const rickAndMortyController = new RickAndMortyController()
 
-  useEffect(() => {
-    ;(async () => {
-      await rickAndMortyController.getCharacter()
-    })()
-  }, [])
+  // useEffect(() => {
+  //   ;(async () => {
+  //     await rickAndMortyController.getCharacter()
+  //   })()
+  // }, [])
 
   console.log(store.getState())
 
