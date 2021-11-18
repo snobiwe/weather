@@ -1,22 +1,13 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo } from 'react'
 import './page.css'
 import { useResponseType, useUsername } from '../../redux/selectors'
 import Card from '../../components/card/card'
 import plant from '../../images/plant.png'
-import { RickAndMortyController } from '../../redux/controllers/RickAndMortyController'
 import store from '../../redux/store'
 
 const Page = memo(({ title, subtitle, button }) => {
   const username = useUsername()
   const response_type = useResponseType()
-
-  // const rickAndMortyController = new RickAndMortyController()
-
-  // useEffect(() => {
-  //   ;(async () => {
-  //     await rickAndMortyController.getCharacter()
-  //   })()
-  // }, [])
 
   console.log(store.getState())
 

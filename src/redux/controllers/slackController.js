@@ -1,6 +1,6 @@
 import ApiService from '../../lib/Api/Api'
-import store from '../store'
 import { CHANGE_ALL } from '../actionTypes'
+import store from '../store'
 
 export class SlackController {
   api = new ApiService()

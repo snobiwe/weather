@@ -2,7 +2,6 @@ import React, { memo } from 'react'
 import './index.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Button from './components/button/button.js'
-
 import Start from './screens/start/start'
 import Page from './screens/page/page.js'
 import { Provider } from 'react-redux'

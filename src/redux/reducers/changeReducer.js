@@ -6,11 +6,11 @@ import {
 import initialState from '../initialState'
 
 const changeReducer = (state = initialState.user, action) => {
-  switch (action) {
+  switch (action.type) {
     case CHANGE_USERNAME:
-      return { ...state, username: action.value }
+      return { ...state, name: action.value.username }
     case CHANGE_RESPONSE_TYPE:
-      return { ...state, response_type: action.value }
+      return { ...state, location: action.value.response_type }
     case CHANGE_ALL:
       return { ...state, ...action.value }
     default:
