@@ -11,7 +11,6 @@ export class SlackController {
         type: CHANGE_ALL,
         value: data,
       })
-      console.log(data)
     } catch (e) {
       console.log(e)
     }

@@ -11,7 +11,6 @@ export class RickAndMortyController {
         type: CHANGE_EVERYTHING,
         value: data,
       })
-      console.log(data)
     } catch (e) {
       console.log(e)
     }

@@ -9,8 +9,6 @@ const Page = memo(({ title, subtitle, button }) => {
   const username = useUsername()
   const response_type = useResponseType()
 
-  console.log(store.getState())
-
   return (
     <div className="page">
       <div className="fields">

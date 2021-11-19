@@ -7,3 +7,5 @@ export const useCharacterName = () =>
   useSelector((state) => state.rickAndMorty.name)
 export const useCharacterStatus = () =>
   useSelector((state) => state.rickAndMorty.status)
+export const useCharacterImage = () =>
+  useSelector((state) => state.rickAndMorty.image)

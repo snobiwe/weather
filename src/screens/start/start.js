@@ -3,13 +3,16 @@ import './start.css'
 import plant from '../../images/plant.png'
 import { RickAndMortyController } from '../../redux/controllers/RickAndMortyController'
 import { SlackController } from '../../redux/controllers/slackController'
-import { useCharacterName, useCharacterStatus } from '../../redux/selectors'
-import store from '../../redux/store'
+import {
+  useCharacterName,
+  useCharacterStatus,
+  useCharacterImage,
+} from '../../redux/selectors'
 
 const Start = memo(({ text, button }) => {
   const character_name = useCharacterName()
   const character_status = useCharacterStatus()
-
+  const character_image = useCharacterImage()
   const rickAndMortyController = new RickAndMortyController()
 
   useEffect(() => {
@@ -26,8 +29,6 @@ const Start = memo(({ text, button }) => {
     })()
   }, [])
 
-  console.log(store.getState())
-
   return (
     <div className="start">
       <div className="start_column">
@@ -37,7 +38,7 @@ const Start = memo(({ text, button }) => {
 
         <div className="button">{button}</div>
       </div>
-      <img src={plant} className="start_photo" alt="plant" />
+      <img src={character_image || plant} className="start_photo" alt="plant" />
     </div>
   )
 })
