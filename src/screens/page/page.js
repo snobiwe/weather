@@ -3,7 +3,6 @@ import './page.css'
 import { useResponseType, useUsername } from '../../redux/selectors'
 import Card from '../../components/card/card'
 import plant from '../../images/plant.png'
-import store from '../../redux/store'
 
 const Page = memo(({ title, subtitle, button }) => {
   const username = useUsername()
