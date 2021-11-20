@@ -42,7 +42,7 @@ const Page = memo(({ title, subtitle, button }) => {
         <ul className="container">
           <li className="card">{<Card plant={plant} text={username} />}</li>
           <li className="card">
-            {<Card plant={plant} text={'lol kek cheburashka'} />}
+            {<Card plant={plant} text={'test text ololo'} />}
           </li>
           <li className="card">
             {<Card plant={plant} text={response_type} />}
