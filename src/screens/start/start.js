@@ -3,15 +3,9 @@ import './start.css'
 import plant from '../../images/plant.png'
 import { RickAndMortyController } from '../../redux/controllers/RickAndMortyController'
 import { SlackController } from '../../redux/controllers/slackController'
-import {
-  useCharacterName,
-  useCharacterStatus,
-  useCharacterImage,
-} from '../../redux/selectors'
+import { useCharacterImage } from '../../redux/selectors'
 
-const Start = memo(({ text, button }) => {
-  const character_name = useCharacterName()
-  const character_status = useCharacterStatus()
+const Start = memo(({ text, button, title, subtitle }) => {
   const character_image = useCharacterImage()
   const rickAndMortyController = new RickAndMortyController()
 
@@ -32,8 +26,8 @@ const Start = memo(({ text, button }) => {
   return (
     <div className="start">
       <div className="start_column">
-        <h1 className="start_title">{character_name}</h1>
-        <h4 className="start_subtitle">{character_status}</h4>
+        <h1 className="start_title">{title}</h1>
+        <h4 className="start_subtitle">{subtitle}</h4>
         <p className="start_text">{text}</p>
 
         <div className="button">{button}</div>
